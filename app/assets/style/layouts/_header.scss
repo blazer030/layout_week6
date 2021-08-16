@@ -1,0 +1,41 @@
+header {
+    .banner {
+        height: 480px;
+        background: url('../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash (1).jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+.menu {
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+.menu-item {
+    position: relative;
+    &::after {
+        width: 100%;
+        position: absolute;
+        content: '';
+        height: 1px;
+        background-color: $primary;
+        transition: opacity .5s;
+        bottom: 10px;
+        opacity: 0;
+    }
+    &:hover::after, &.active::after {
+        opacity: 1;
+    }
+}
+
+.logo {
+    font-size: $h4-font-size;
+
+    @include mobile {
+        font-size: 22px;
+    }
+}

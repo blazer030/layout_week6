@@ -1,15 +1,13 @@
 body {
     font-size: $font-size-base;
+    color: $black;
+    line-height: 1.5;
 }
 
 img {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
-}
-
-a {
-    text-decoration: none;
 }
 
 h1,
@@ -19,6 +17,7 @@ h4,
 h5,
 h6,
 p {
+    font-weight: normal;
     margin: 0;
     padding: 0;
     border: 0;
