@@ -3,3 +3,9 @@
         @content;
     }
 };
+
+@mixin not-mobile {
+    @include media-breakpoint-up("md") {
+        @content;
+    }
+};

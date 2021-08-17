@@ -1,15 +1,12 @@
-footer {
-    .banner {
+.footer {
+    &-banner {
         height: 400px;
-        background: url('../images/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+        background-image: url('../images/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg');
     }
 
-    .subscribe {
+    &-subscribe {
         font-size: $h2-font-size;
-
+    
         @include mobile {
             font-size: $h4-font-size;
         }

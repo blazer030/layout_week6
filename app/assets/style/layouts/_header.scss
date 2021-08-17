@@ -1,17 +1,25 @@
-header {
-    .banner {
-        height: 480px;
-        background: url('../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash (1).jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+.toolbar {
+    margin-bottom: -1px;
+}
+
+.logo {
+    font-size: $h4-font-size;
+
+    @include mobile {
+        font-size: 22px;
     }
+}
+
+.product-banner {
+    height: 480px;
 }
 
 .menu {
     overflow-x: scroll;
-    &::-webkit-scrollbar {
-      display: none;
+    @include not-mobile {
+        &::-webkit-scrollbar {
+          display: none;
+        }
     }
 }
 
@@ -29,13 +37,5 @@ header {
     }
     &:hover::after, &.active::after {
         opacity: 1;
-    }
-}
-
-.logo {
-    font-size: $h4-font-size;
-
-    @include mobile {
-        font-size: 22px;
     }
 }
