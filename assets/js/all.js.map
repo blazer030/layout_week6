@@ -1,0 +1,1 @@
+{"version":3,"sources":["all.js"],"names":["$","document","ready","console","log"],"mappings":";;AAAAA,CAAC,CAACC,QAAD,CAAD,CAAYC,KAAZ,CAAkB,YAAM;AACpBC,EAAAA,OAAO,CAACC,GAAR,CAAY,WAAZ;AACH,CAFD","file":"all.js","sourcesContent":["$(document).ready(() => {\r\n    console.log(\"i'm ready\");\r\n});"]}
