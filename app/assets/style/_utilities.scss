@@ -1,0 +1,41 @@
+@each $ratio, $value in $aspect-ratios {
+    .ratio-#{$ratio} {
+        aspect-ratio: $value;
+    }
+}
+
+@each $breakpoints, $value in $grid-breakpoints {
+    $next: breakpoint-next($breakpoints);
+    @if $next != null {
+        @include media-breakpoint-up($next) {
+
+            @each $ratio, $value in $aspect-ratios {
+                .ratio-#{$next}-#{$ratio} {
+                    aspect-ratio: $value;
+                }
+            }
+
+            @each $key, $value in (
+                25: 25%, 
+                50: 50%,
+                75: 75%,
+                100: 100%,
+                auto: auto
+            ) {
+                .w-#{$next}-#{$key} {
+                    width: $value !important;
+                }
+            }
+        }
+    }
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
