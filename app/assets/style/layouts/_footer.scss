@@ -12,3 +12,23 @@
         }
     }
 }
+
+.recommend-item {
+    img {
+        width: 100%;
+        max-width: 350px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    
+        @include mobile {
+            max-width: unset;
+        }
+    }
+}
+
+.recommend-list {
+    .slick-prev::before,
+    .slick-next::before {
+        color: $primary;
+    }
+}
