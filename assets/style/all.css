@@ -194,7 +194,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #000;
+  color: inherit;
   text-decoration: none; }
   a:hover {
     color: #E31277; }
@@ -3415,7 +3415,7 @@ textarea.form-control-lg {
 
 .btn-link {
   font-weight: 400;
-  color: #000;
+  color: inherit;
   text-decoration: none; }
   .btn-link:hover {
     color: #E31277; }
@@ -3832,7 +3832,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #000;
+  color: inherit;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out; }
@@ -4717,7 +4717,7 @@ textarea.form-control-lg {
 .page-link {
   position: relative;
   display: block;
-  color: #000;
+  color: inherit;
   background-color: #fff;
   border: 1px solid #dee2e6;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -11886,6 +11886,17 @@ p {
 
 .menu {
   overflow-x: scroll; }
+  .menu:hover::-webkit-scrollbar-thumb {
+    background-color: #777777; }
+  .menu::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+    background-color: transparent; }
+  .menu::-webkit-scrollbar-thumb {
+    background-color: rgba(170, 170, 170, 0.3);
+    border-radius: 5px; }
+  .menu::-webkit-scrollbar-track {
+    background-color: transparent; }
   @media (min-width: 768px) {
     .menu::-webkit-scrollbar {
       display: none; } }
@@ -11915,6 +11926,19 @@ p {
   @media (max-width: 767.98px) {
     .footer-subscribe {
       font-size: 1.5rem; } }
+
+.recommend-item {
+  padding-left: 45px;
+  padding-right: 45px; }
+  .recommend-item img {
+    width: 350px;
+    height: 350px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.recommend-list .slick-prev::before,
+.recommend-list .slick-next::before {
+  color: #E31277; }
 
 .banner {
   background-repeat: no-repeat;
