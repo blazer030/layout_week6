@@ -385,7 +385,7 @@ $spacer: 1rem !default;
   5: $spacer * 3,
 ) !default;*/
 $spacers: ();
-@for $key from 0 to 16 {
+@for $key from 0 to 21 {
   $spacers: map-merge($spacers, ($key: $spacer*$key*.25));
 }
 
@@ -594,6 +594,7 @@ $font-size-lg:                $font-size-base * 1.25 !default;
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
 $font-weight-bold:            700 !default;
 $font-weight-bolder:          bolder !default;
 
@@ -614,6 +615,7 @@ $h6-font-size:                $font-size-base !default;
 // scss-docs-start font-sizes
 $font-sizes: (
   1: $h1-font-size,
+  1d5: $font-size-base * 2.25,
   2: $h2-font-size,
   3: $h3-font-size,
   4: $h4-font-size,

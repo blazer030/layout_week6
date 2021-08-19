@@ -13,9 +13,9 @@
 </head>
 
 <body>
-  <header class="toolbar border border-secondary py-4 py-md-7">
+  <header class="toolbar border border-secondary border-bottom-0 py-4 py-md-7">
     <div class="container-xl d-flex justify-content-center align-items-center position-relative">
-      <h1 class="logo text-primary-dark"><a href="index.html">EXHIBINECTION</a></h1>
+      <h1 class="text-primary-dark fs-md-4 fs-5 "><a href="index.html">EXHIBINECTION</a></h1>
       <div class="d-flex ustify-content-end align-items-center position-absolute top-50 end-0 translate-middle-y">
         <div class="text-secondary me-8 d-none d-md-block"><a href="#">Sign in</a></div>
         <div class="text-secondary me-8 d-none d-md-block"><a href="#">Sign up</a></div>
@@ -27,7 +27,7 @@
     </div>
   </header>
   <% if (current == 'index') { %>
-  <section class="banner product-banner d-flex align-items-center" style="background-image: url('assets/images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash.jpg');">
+  <section class="banner h-480 d-flex align-items-center" style="background-image: url('assets/images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash.jpg');">
     <div class="container-xl">
       <div class="row">
         <div class="col-md-4 offset-md-1 text-white">
@@ -42,7 +42,7 @@
     </div>
   </section>
   <% } %>
-  <nav class="border border-secondary sticky-top bg-white mb-5 mb-md-15">
+  <nav class="border border-secondary sticky-top bg-white">
     <div class="container-xl d-flex justify-content-center align-items-center">
       <ul class="menu d-flex list-unstyled m-0">
         <li class="menu-item me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">音樂</a></li>
@@ -60,7 +60,7 @@
   <main>
     <%- contents %>
   </main>
-  <section class="recommend mb-6 mb-md-15">
+  <section class="recommend pt-6 pt-md-15 mb-6 mb-md-15">
     <div class="container-xl">
       <h2 class="fw-bold mb-2 mb-md-6">猜你也喜歡...</h2>
       <div class="swiper-container">
@@ -101,8 +101,8 @@
               想收到最新消息嗎？<br>快訂閱我們！
             </p>
             <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="輸入您的電子信箱">
-              <input type="button" value="訂閱" class="btn btn-primary py-3 px-13">
+              <input type="text" class="form-control fs-6" placeholder="輸入您的電子信箱">
+              <input type="button" value="訂閱" class="btn btn-primary py-3 px-8 px-md-13 fs-6">
             </div>
           </div>
         </div>

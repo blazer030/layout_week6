@@ -1,0 +1,31 @@
+.menu {
+    overflow-x: scroll;
+    @include customScrollbar(#777777, 0.3, transparent, 8px);
+    
+    @include not-mobile {
+        &::-webkit-scrollbar {
+          display: none;
+        }
+    }
+
+    &-item {
+        position: relative;
+        &::after {
+            width: 100%;
+            position: absolute;
+            content: '';
+            height: 1px;
+            background-color: $primary;
+            transition: opacity .5s;
+            bottom: 10px;
+            opacity: 0;
+    
+            @include mobile {
+                bottom: 2px;
+            }
+        }
+        &:hover::after, &.active::after {
+            opacity: 1;
+        }
+    }
+}

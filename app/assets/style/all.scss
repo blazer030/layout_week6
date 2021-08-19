@@ -1,9 +1,17 @@
 @import "bootstrap/scss/functions";
 @import "helpers/variables";
+@import "bootstrap/scss/utilities";
+@import "utilites/bootstrap";
 @import "bootstrap/scss/bootstrap";
 
-@import "base";
-@import "helpers";
-@import "layouts";
-@import "pages";
-@import "utilities";
+@import "utilites/utilities";
+
+@import "base/font";
+@import "base/base";
+
+@import "helpers/mixins";
+
+@import "components/menu";
+@import "components/footer";
+
+@import "pages/index";
