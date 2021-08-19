@@ -1,17 +1,58 @@
 $utilities: map-merge(
     $utilities,
     (
-        "font-size":
-        map-merge(
+        "overflow-x":(
+            responsive: true,
+            property: overflow-x,
+            values: auto hidden visible scroll,
+        ),
+        "overflow-y":(
+            responsive: true,
+            property: overflow-y,
+            values: auto hidden visible scroll,
+        ),
+        
+        "border": map-merge(
+            map-get($utilities, "border"),
+            (
+                responsive: true,
+            )
+        ),
+        "border-top":  map-merge(
+            map-get($utilities, "border-top"),
+            (
+                responsive: true
+            )
+        ),
+        "border-bottom": map-merge(
+            map-get($utilities, "border-bottom"),
+            (
+                responsive: true
+            )
+        ),
+        "border-start": map-merge(
+            map-get($utilities, "border-start"),
+            (
+                responsive: true
+            )
+        ),
+        "border-end": map-merge(
+            map-get($utilities, "border-end"),
+            (
+                responsive: true
+            )
+        ),
+
+        "font-size": map-merge(
             map-get($utilities, "font-size"),
             (
                 responsive: true,
             )
         ),
-        "font-weight":
-        map-merge(
+        "font-weight": map-merge(
             map-get($utilities, "font-weight"),
             (
+            responsive: true,
             values:
                 map-merge(
                     map-get(map-get($utilities, "font-weight"), "values"),

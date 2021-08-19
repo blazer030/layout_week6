@@ -14,18 +14,6 @@
                     aspect-ratio: $value;
                 }
             }
-
-            @each $key, $value in (
-                25: 25%, 
-                50: 50%,
-                75: 75%,
-                100: 100%,
-                auto: auto
-            ) {
-                .w-#{$next}-#{$key} {
-                    width: $value !important;
-                }
-            }
         }
     }
 }
@@ -40,6 +28,15 @@
     background-size: cover;
 }
 
-.h-480 {
-    height: 480px;
+.text-indent {
+    text-indent: 2rem;
+}
+
+.over-container {
+    @include mobile {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 }
