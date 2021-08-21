@@ -46,6 +46,7 @@ let envOptions = {
     src: [
       `${nodePath}/jquery/dist/**/jquery.min.js`,
       `${nodePath}/bootstrap/dist/js/bootstrap.bundle.min.js`,
+      `${nodePath}/aos/dist/aos.js`,
     ],
     concat: 'vendors.js',
     path: `${distPath}/assets/js`,
