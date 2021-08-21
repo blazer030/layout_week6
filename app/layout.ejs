@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="toolbar border border-secondary border-bottom-0 py-4 py-md-7">
+  <header class="toolbar border border-secondary py-4 py-md-7 sticky-top bg-white">
     <div class="container-lg d-flex justify-content-center align-items-center position-relative">
       <h1 class="text-primary-dark fs-md-4 fs-5 "><a href="index.html">EXHIBINECTION</a></h1>
       <div class="d-flex ustify-content-end align-items-center position-absolute top-50 end-0 translate-middle-y">
@@ -26,7 +26,7 @@
       </div>
     </div>
   </header>
-  <% if (current == 'index') { %>
+  <% if (current === 'index') { %>
   <section class="banner h-480p d-flex align-items-center" style="background-image: url('assets/images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash.jpg');">
     <div class="container-lg">
       <div class="row">
@@ -42,83 +42,20 @@
     </div>
   </section>
   <% } %>
-  <nav class="border border-secondary sticky-top bg-white">
-    <div class="d-flex justify-content-center align-items-center">
-      <ul class="scrollbar-menu overflow-auto d-flex list-unstyled m-0">
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">音樂</a></li>
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">戲劇</a></li>
-        <li class="underline me-5 <% if (current == 'product') {%> active <%}%>"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">設計</a></li>
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">藝術</a></li>
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">美食</a></li>
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">旅遊</a></li>
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">電影</a></li>
-        <li class="underline me-5"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">親子</a></li>
-        <li class="underline"><a href="product.html" class="d-block px-5 pt-4 pb-md-4 pb-2 link-secondary text-nowrap">期間限定</a></li>
-      </ul>
-    </div>
-  </nav>
+
+  <% if (menu) { %>
+    <%- include('./components/menu.ejs')  %>
+  <% } %>
+
   <main>
     <%- contents %>
   </main>
-  <section class="recommend pt-6 pt-md-15 mb-6 mb-md-15">
-    <div class="container-lg">
-      <h2 class="fw-bold mb-2 mb-md-6">猜你也喜歡...</h2>
-      <div class="swiper-container">
-        <ul class="recommend-list list-unstyled mb-0 swiper-wrapper">
-          <li class="recommend-item swiper-slide">
-            <a href="detail.html" class="d-block">
-              <img src="assets/images/ricardo-gomez-angel-WxpnuLzqZN4-unsplash.jpg" alt="" class="w-100 img-cover ratio-1x1 mb-1">
-              <h5 class="fw-bold mb-1">No.22 線上設計展</h5>
-              <p class="fs-5">$350</p>
-            </a>
-          </li>
-          <li class="recommend-item swiper-slide">
-            <a href="detail.html" class="d-block">
-              <img src="assets/images/petri-heiskanen-bR9gFJqAnzA-unsplash.jpg" alt="" class="w-100 img-cover ratio-1x1 mb-1">
-              <h5 class="fw-bold mb-1">No.22 線上設計展</h5>
-              <p class="fs-5">$350</p>
-            </a>
-          </li>
-          <li class="recommend-item swiper-slide">
-            <a href="detail.html" class="d-block">
-              <img src="assets/images/museums-victoria-kiDwVL_5ZBY-unsplash.jpg" alt="" class="w-100 img-cover ratio-1x1 mb-1">
-              <h5 class="fw-bold mb-1">No.22 線上設計展</h5>
-              <p class="fs-5">$350</p>
-            </a>
-          </li>
-        </ul>
-        <div class="swiper-button-next text-primary"></div>
-        <div class="swiper-button-prev text-primary"></div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="banner footer-banner pb-9 d-flex align-items-end">
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-md-8 col-lg-6 col-xl-4">
-            <p class="footer-subscribe fw-bold text-white mb-6 mb-md-3">
-              想收到最新消息嗎？<br>快訂閱我們！
-            </p>
-            <div class="input-group input-group-lg">
-              <input type="text" class="form-control fs-6" placeholder="輸入您的電子信箱">
-              <input type="button" value="訂閱" class="btn btn-primary py-3 px-8 px-md-13 fs-6">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-lg d-flex justify-content-between align-items-center py-4 py-md-7">
-      <div class="copyright d-flex align-items-start flex-column align-items-md-center flex-md-row">
-        <h4 class="me-4">EXHIBINECTION</h4>
-        <span>© 2020. All Rights Reserved.</span>
-      </div>
-      <div class="justify-content-end align-items-center d-none d-md-flex">
-        <div class="text-secondary me-6"><a href="#">Sign in</a></div>
-        <div class="text-secondary"><a href="#">Sign up</a></div>
-      </div>
-    </div>
-  </footer>
+
+
+  <% if (footer) { %>
+    <%- include('./components/footer.ejs')  %>
+  <% } %>
+
   <div class="offcanvas offcanvas-end sidebar w-md-540p w-100 bg-black text-white p-4 pe-2 p-md-8 pe-md-4" data-bs-scroll="false" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
     <div class="offcanvas-header p-0 pb-4 pe-2 pe-md-4">
       <h4 class="fs-md-2" id="offcanvasCartLabel">Cart List</h4>
@@ -128,7 +65,7 @@
       <li class="rounded bg-white text-black pb-6 mb-2 mb-md-3 w-100">
         <input type="button" value="" class="btn-close mt-1 ms-1 mb-1">
         <div class="ps-4 ps-md-8 d-flex">
-          <img src="https://images.unsplash.com/photo-1545987796-b199d6abb1b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="w-120p h-120p img-cover me-4">
+          <img src="assets/images/alina-grubnyak-R84Oy89aNKs-unsplash.jpg" alt="" class="w-120p h-120p img-cover me-4">
           <div class="flex-shrink-0">
             <h6 class="fw-bold mb-1">2020 台味設計展</h6>
             <p class="fw-medium mb-1">01 JUN — 31 OCT</p>
@@ -153,9 +90,9 @@
       <li class="rounded bg-white text-black pb-6 mb-2 mb-md-3">
         <input type="button" value="" class="btn-close mt-1 ms-1 mb-1">
         <div class="ps-4 ps-md-8 d-flex">
-          <img src="https://images.unsplash.com/photo-1545987796-b199d6abb1b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="w-120p h-120p img-cover me-4">
+          <img src="assets/images/michel-catalisano--a0D9LpcKV8-unsplash.jpg" alt="" class="w-120p h-120p img-cover me-4">
           <div class="flex-shrink-0">
-            <h6 class="fw-bold mb-1">2020 台味設計展</h6>
+            <h6 class="fw-bold mb-1">No.22 線上設計展</h6>
             <p class="fw-medium mb-1">01 JUN — 31 OCT</p>
             <p class="text-secondary mb-4">全票</p>
             <p class="fs-5 fw-bold ms-auto">NT$350</p>
@@ -178,9 +115,9 @@
       <li class="rounded bg-white text-black pb-6">
         <input type="button" value="" class="btn-close mt-1 ms-1 mb-1">
         <div class="ps-4 ps-md-8 d-flex">
-          <img src="https://images.unsplash.com/photo-1545987796-b199d6abb1b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" class="w-120p h-120p img-cover me-4">
+          <img src="assets/images/moralis-tsai-8xsktFRw28I-unsplash.jpg" alt="" class="w-120p h-120p img-cover me-4">
           <div class="flex-shrink-0">
-            <h6 class="fw-bold mb-1">2020 台味設計展</h6>
+            <h6 class="fw-bold mb-1">高雄設計節</h6>
             <p class="fw-medium mb-1">01 JUN — 31 OCT</p>
             <p class="text-secondary mb-4">全票</p>
             <p class="fs-5 fw-bold ms-auto">NT$350</p>
@@ -206,7 +143,7 @@
         <span class="me-6">小計</span>
         <span>NT$1050</span>
       </div>
-      <a href="cartList.html" type="button" class="btn btn-outline-primary-dark text-primary-dark py-2 px-6 bg-white">前往結帳</a>
+      <a href="checkout1.html" type="button" class="btn btn-outline-primary-dark text-primary-dark py-2 px-6 bg-white">前往結帳</a>
     </div>
   </div>
   <script src="./assets/js/vendors.js"></script>

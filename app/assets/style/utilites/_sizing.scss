@@ -1,5 +1,6 @@
 $sizes: (
     40p: 40px,
+    84p: 84px,
     120p: 120px,
     256p: 256px,
     350p: 350px,
@@ -51,4 +52,12 @@ $sizes: (
             }
         }
     }
+}
+
+.mh-50v {
+    min-height: 50vh;
+}
+
+.mh-75v {
+    min-height: 75vh;
 }
