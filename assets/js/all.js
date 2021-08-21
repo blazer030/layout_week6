@@ -2,6 +2,10 @@
 
 $(document).ready(function () {
   console.log("i'm ready");
+  AOS.init({
+    offset: 400,
+    duration: 1000
+  });
   var swiper = new Swiper(".swiper-container", {
     slidesPerView: 1,
     spaceBetween: 10,
