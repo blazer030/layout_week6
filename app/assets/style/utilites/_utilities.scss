@@ -40,3 +40,21 @@
         margin-right: -15px;
     }
 }
+
+.underline {
+    position: relative;
+    &::after {
+        width: 100%;
+        position: absolute;
+        content: '';
+        height: 1px;
+        background-color: $primary;
+        transition: opacity .5s;
+        bottom: 15%;
+        left: 0px;
+        opacity: 0;
+    }
+    &:hover::after, &.active::after {
+        opacity: 1;
+    }
+}

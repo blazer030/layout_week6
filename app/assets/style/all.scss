@@ -4,15 +4,16 @@
 @import "utilites/bootstrap";
 @import "bootstrap/scss/bootstrap";
 
+@import "helpers/mixins";
+
 @import "utilites/utilities";
 @import "utilites/sizing";
 
 @import "base/font";
 @import "base/base";
 
-@import "helpers/mixins";
-
-@import "components/menu";
+@import "components/scrollbar";
 @import "components/footer";
+@import "components/sidebar";
 
 @import "pages/index";

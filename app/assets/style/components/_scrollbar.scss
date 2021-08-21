@@ -1,0 +1,15 @@
+.scrollbar {
+    &-menu {
+        @include customScrollbar(#777777, 0.3, transparent, 8px);
+        
+        @include not-mobile {
+            &::-webkit-scrollbar {
+              display: none;
+            }
+        }
+    }
+
+    &-cart {
+        @include customScrollbar($primary, 1, $secondary, 2px);
+    }
+}
