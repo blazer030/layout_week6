@@ -14333,7 +14333,8 @@ textarea.form-control-lg {
 body {
   font-size: 1rem;
   color: #000;
-  line-height: 1.5; }
+  line-height: 1.5;
+  overflow-x: hidden; }
 
 img {
   max-width: 100%;
